@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ToDoList: список задач, которые нужно выполнить">
+  <title>ToDoList</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="main">
+      <section class="tasks container">
+        <h1 class="tasks__title">Чек-листы</h1>
+        <div class="tasks__tabs-list tabs">
+          <button class="tabs__item btn is-active" type="button" data-tabs="tabs" data-sort="all">Все задачи</button>
+          <button class="tabs__item btn" type="button" data-tabs="tabs" data-sort="active">Активные</button>
+          <button class="tabs__item btn" type="button" data-tabs="tabs" data-sort="checked">Выполненные</button>
+          <button class="tabs__item btn btn--add-checklist" type="button" data-tabs="add">+ добавить чек-лист</button>
+        </div>
+        <div class="tasks__checklist checklist">
+          <div class="checklist__header">
+            <div class="checklist__rename">
+              <h2 class="checklist__title" contenteditable>Чек-лист 1</h2>
+              <svg width="20" height="18" aria-hidden="true" focusable="false">
+                <use href="./img/sprite.svg#rename"></use>
+              </svg>
+            </div>
+            <button class="checklist__btn-delete-checklist btn btn--delete-checklist" type="button">Удалить чек-лист</button>
+          </div>
+          <ul class="checklist__list">
+            <li class="checklist__item">
+              <label>
+                <input type="checkbox">
+                <span class="checklist__custom-checkbox"></span>
+                <span contenteditable="false">Сделать кнопку</span>
+              </label>
+              <button class="checklist__btn-delete-item btn btn--delete-item" type="button">
+                <svg width="20" height="26" aria-hidden="true" focusable="false">
+                  <use href="./img/sprite.svg#delete"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="checklist__item">
+              <label>
+                <input type="checkbox">
+                <span class="checklist__custom-checkbox"></span>
+                <span contenteditable="false">Сделать меню</span>
+              </label>
+              <button class="checklist__btn-delete-item btn btn--delete-item" type="button">
+                <svg width="20" height="26" aria-hidden="true" focusable="false">
+                  <use href="./img/sprite.svg#delete"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="checklist__item">
+              <label>
+                <input type="checkbox" checked>
+                <span class="checklist__custom-checkbox"></span>
+                <span contenteditable="false">Сделать подвал</span>
+              </label>
+              <button class="checklist__btn-delete-item btn btn--delete-item" type="button">
+                <svg width="20" height="26" aria-hidden="true" focusable="false">
+                  <use href="./img/sprite.svg#delete"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+          <button class="checklist__btn-add-item btn btn--add-item" type="button">+ добавить пункт</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
