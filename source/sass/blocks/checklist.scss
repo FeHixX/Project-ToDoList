@@ -38,6 +38,7 @@
 }
 
 .checklist__title {
+  min-width: 30px;
   margin: 0;
   font-weight: 300;
   font-size: 20px;
@@ -119,6 +120,11 @@
     width: 16px;
     height: 16px;
   }
+}
+
+.checklist__custom-label {
+  display: block;
+  min-width: 30px;
 }
 
 .checklist__btn-delete-item {
