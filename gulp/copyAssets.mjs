@@ -13,7 +13,10 @@ const copy = () =>
     'source/**.html',
     'source/fonts/**',
     'source/img/**',
-    '!source/img/sprite/**'
+    '!source/img/sprite/**',
+    'source/favicon/**',
+    'source/*.webmanifest',
+    'source/*.ico'
   ], {
     base: 'source',
   })
