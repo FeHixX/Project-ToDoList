@@ -1,0 +1,130 @@
+.checklist {
+  padding: 20px;
+  background-color: $color-snow;
+  border-radius: 15px;
+
+  @include vp-767 {
+    padding: 15px;
+  }
+}
+
+.checklist__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 18px;
+  gap: 0 30px;
+
+  @include vp-767 {
+    flex-direction: column-reverse;
+    gap: 20px 0;
+  }
+}
+
+.checklist__rename {
+  display: flex;
+  align-items: center;
+  gap: 0 17px;
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  @include vp-767 {
+    svg {
+      width: 16px;
+      height: 14px;
+    }
+  }
+}
+
+.checklist__title {
+  margin: 0;
+  font-weight: 300;
+  font-size: 20px;
+
+  @include focus {
+    outline: none;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+  }
+}
+
+.checklist__btn-delete-checklist {
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.checklist__list {
+  margin: 0 0 17px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.checklist__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 17px;
+  border-bottom: 2px solid $color-pink-swan;
+  gap: 0 30px;
+
+  label {
+    position: relative;
+    padding: 0 0 0 37px;
+  }
+
+  input {
+    display: none;
+  }
+
+  input:checked + .checklist__custom-checkbox {
+    background-color: $color-cornflower-blue-2;
+  }
+
+  input:checked + span + span {
+    color: $color-nobel;
+    text-decoration-line: line-through;
+  }
+
+  span {
+    @include focus {
+      outline: none;
+    }
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    gap: 0 10px;
+
+    label {
+      padding: 0 0 0 25px;
+    }
+  }
+}
+
+.checklist__custom-checkbox {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $color-cornflower-blue-2;
+  border-radius: 50%;
+  transform: translateY(-50%);
+
+  @include vp-767 {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.checklist__btn-delete-item {
+  margin: 0 20px 0 0;
+
+  @include vp-767 {
+    margin: 0 5px 0 0;
+  }
+}
