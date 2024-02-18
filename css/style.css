@@ -326,6 +326,7 @@ button,
 }
 
 .checklist__title {
+  min-width: 30px;
   margin: 0;
   font-weight: 300;
   font-size: 20px;
@@ -398,6 +399,11 @@ button,
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.checklist__custom-label {
+  display: block;
+  min-width: 30px;
 }
 
 .checklist__btn-delete-item {
